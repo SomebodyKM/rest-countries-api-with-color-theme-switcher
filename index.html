@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <title>Where in the world?</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">Where in the world?</a>
+            </div>
+            <div class="mode-toggle">
+                <a href="#"><i class="fa-regular fa-moon"></i></a>
+                <a href="#">Dark Mode</a>
+            </div>
+        </header>
+
+        <main>
+            <div class="search-filter">
+                <form class="search-bar">
+                    <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <input type="text" id="search-input" class="search-input" placeholder="Search for a country..." autocomplete="off">
+                </form>
+                <div class="filter-container">
+                    <select name="region" id="region" title="Filter by Region" class="region-select" autocomplete="off">
+                        <option value="all">Filter by Region</option>
+                        <option value="africa">Africa</option>
+                        <option value="americas">Americas</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="oceania">Oceania</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="country-container"></div>
+        </main>
+
+    </div>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

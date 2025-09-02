@@ -1,0 +1,49 @@
+@media screen and (min-width:768px) {
+    header {
+        padding: 2rem 3rem;
+    }
+
+    main {
+        padding: 2rem 2rem;
+        gap: 3rem;
+
+        .search-filter {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .country-container {
+            .cards-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+            }
+        }
+    }
+
+    .country-detail {
+        padding: 5rem 4rem;
+        gap: 5rem;
+
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+
+            .detail {
+                .info-section {
+                    flex-direction: row;
+                }
+
+                .border-container {
+                    flex-direction: row;
+                    align-items: center;
+
+                    p {
+                        align-self: flex-start;
+                    }
+                }
+            }
+
+        }
+    }
+}
