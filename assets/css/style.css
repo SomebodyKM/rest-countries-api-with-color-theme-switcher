@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.5rem;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 5px rgb(196, 194, 196);
+}
+header .logo {
+  align-self: center;
+}
+header .logo a {
+  text-decoration: none;
+  font-weight: 800;
+  color: hsl(200, 15%, 8%);
+}
+header .logo:hover {
+  cursor: pointer;
+}
+header .mode-toggle {
+  padding: 0.5rem;
+  transition: all 0.5s linear;
+}
+header .mode-toggle a {
+  text-decoration: none;
+  font-weight: 600;
+  color: hsl(200, 15%, 8%);
+}
+header .mode-toggle:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  border-radius: 5px;
+}
+
+body.dark-mode header {
+  background-color: hsl(209, 23%, 22%);
+}
+body.dark-mode header .logo a,
+body.dark-mode header .mode-toggle a {
+  color: hsl(0, 100%, 100%);
+}
+body.dark-mode header .mode-toggle:hover {
+  box-shadow: 0px 0px 20px 2px rgba(255, 255, 255, 0.2);
+}
+
+main {
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: hsl(0, 0%, 99%);
+}
+main .search-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .search-filter form {
+  background-color: hsl(0, 100%, 100%);
+  padding: 1rem;
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  border-radius: 5px;
+  display: flex;
+}
+main .search-filter form a {
+  text-decoration: none;
+  color: hsl(0, 0%, 50%);
+  font-size: 1.5rem;
+  padding: 0;
+  opacity: 0.5;
+}
+main .search-filter form #search-input {
+  font-size: 1.2rem;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 0 1rem;
+  width: 100%;
+}
+main .search-filter form #search-input::placeholder {
+  color: hsl(0, 0%, 50%);
+  opacity: 0.7;
+}
+main .search-filter .filter-container {
+  padding: 1rem 1.5rem;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .search-filter .filter-container #region {
+  border: none;
+  outline: none;
+  padding-right: 5rem;
+  font-weight: 500;
+  font-family: "Nunito Sans", sans-serif;
+  appearance: none;
+  position: relative;
+  background-image: url("../images/angle-down-solid-full.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+main .country-container {
+  font-family: "Nunito Sans", sans-serif;
+}
+main .country-container .cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main .country-container .cards-container .card {
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+main .country-container .cards-container .card img {
+  width: 320px;
+}
+main .country-container .cards-container .card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+main .country-container .cards-container .card .info .info-p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .country-container .cards-container .card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+body.dark-mode main {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 100%, 100%);
+}
+body.dark-mode main .search-filter form {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: none;
+}
+body.dark-mode main .search-filter form a {
+  color: hsl(0, 100%, 100%);
+  opacity: 0.7;
+}
+body.dark-mode main .search-filter form #search-input {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 100%, 100%);
+}
+body.dark-mode main .search-filter form #search-input::placeholder {
+  color: hsl(0, 100%, 100%);
+  opacity: 0.6;
+}
+body.dark-mode main .search-filter .filter-container {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: none;
+}
+body.dark-mode main .search-filter .filter-container #region {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 100%, 100%);
+  background-image: url("../images/angle-down-solid-full-white.svg");
+  background-repeat: no-repeat;
+}
+body.dark-mode main .country-container .cards-container .card {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: none;
+}
+body.dark-mode main .country-container .cards-container .card .info {
+  color: hsl(0, 100%, 100%);
+}
+
+.country-detail {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  font-family: "Nunito Sans", sans-serif;
+}
+.country-detail .back-btn {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  border-radius: 5px;
+  width: fit-content;
+  padding: 1rem 2rem;
+  color: hsl(200, 15%, 8%);
+}
+.country-detail .back-btn span {
+  font-size: 20px;
+}
+.country-detail .detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.country-detail .detail-container img {
+  width: 100%;
+}
+.country-detail .detail-container .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.country-detail .detail-container .detail h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+.country-detail .detail-container .detail .info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.country-detail .detail-container .detail .info-section .info-section-one {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.country-detail .detail-container .detail .info-section .info-section-two {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.country-detail .detail-container .detail .border-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.country-detail .detail-container .detail .border-container p {
+  font-size: 20px;
+}
+.country-detail .detail-container .detail .border-container .border {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+.country-detail .detail-container .detail .border-container .border span {
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 2px rgb(196, 194, 196);
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+body.dark-mode .country-detail {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 100%, 100%);
+}
+body.dark-mode .country-detail .back-btn {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 100%, 100%);
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.6);
+}
+body.dark-mode .country-detail .detail-container .border-container .border span {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 2rem 3rem;
+  }
+  main {
+    padding: 2rem 2rem;
+    gap: 3rem;
+  }
+  main .search-filter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .country-container .cards-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .country-detail {
+    padding: 5rem 4rem;
+    gap: 5rem;
+  }
+  .country-detail .detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+  .country-detail .detail-container .detail .info-section {
+    flex-direction: row;
+  }
+  .country-detail .detail-container .detail .border-container {
+    flex-direction: row;
+    align-items: center;
+  }
+  .country-detail .detail-container .detail .border-container p {
+    align-self: flex-start;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 99%);
+}
+
+/*# sourceMappingURL=style.css.map */
